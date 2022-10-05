@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IDisplayable
+    public class Person : IDisplayable, IResettable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -35,6 +35,14 @@
         public void Display()
         {
             MessageBox.Show("My name is " + this.Name);
+        }
+
+        /// <summary>
+        /// This Method will take the Name held in memory and clear it.
+        /// </summary>
+        public void Reset()
+        {
+            this.Name = string.Empty;
         }
     }
 }

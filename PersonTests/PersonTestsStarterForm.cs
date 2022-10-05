@@ -29,20 +29,25 @@ namespace PersonTests
         //    }
         //}
 
-        //private static int TestReset()
-        //{
-        //    Person person = new ("Test");
-        //    person.Reset();
-        //    if (person.Name == string.Empty)
-        //    {
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("TestReset failed!");
-        //        return 1;
-        //    }
-        //}
+        /// <summary>
+        /// The TestReset method checks if the reset method in the Person class is working properly.
+        /// </summary>
+        /// <returns> Returns a 0 for success or 1 for failure.
+        /// </returns>
+        private static int TestReset()
+        {
+            Person person = new("Test");
+            person.Reset();
+            if (person.Name == string.Empty)
+            {
+                return 0;
+            }
+            else
+            {
+                MessageBox.Show("TestReset failed!");
+                return 1;
+            }
+        }
 
         //private static int TestCompare()
         //{
@@ -86,7 +91,7 @@ namespace PersonTests
             // Run feature tests here
             this.failedTests += TestDisplay();
             // this.failedTests += TestCompare();
-            // this.failedTests += TestReset();
+            this.failedTests += TestReset();
             // this.failedTests += TestSize();
             MessageBox.Show(this.failedTests.ToString() + " of 4 tests failed!");
         }
