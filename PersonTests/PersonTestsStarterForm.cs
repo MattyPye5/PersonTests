@@ -15,19 +15,19 @@ namespace PersonTests
             this.InitializeComponent();
         }
 
-        //private static int TestSize()
-        //{
-        //    Person person = new ("Test");
-        //    if (person.Size == 4)
-        //    {
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("TestSize failed!");
-        //        return 1;
-        //    }
-        //}
+        private static int TestSize()
+        {
+            Person person = new("Test");
+            if (person.Size() == 4)
+            {
+                return 0;
+            }
+            else
+            {
+                MessageBox.Show("TestSize failed!");
+                return 1;
+            }
+        }
 
         /// <summary>
         /// The TestReset method checks if the reset method in the Person class is working properly.
@@ -92,7 +92,7 @@ namespace PersonTests
             this.failedTests += TestDisplay();
             // this.failedTests += TestCompare();
             this.failedTests += TestReset();
-            // this.failedTests += TestSize();
+            this.failedTests += TestSize();
             MessageBox.Show(this.failedTests.ToString() + " of 4 tests failed!");
         }
     }
