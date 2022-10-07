@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IDisplayable, IResettable
+    public class Person : IDisplayable, IResettable, IMeasurable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -35,6 +35,16 @@
         public void Display()
         {
             MessageBox.Show("My name is " + this.Name);
+        }
+
+        /// <summary>
+        /// This method will take the number of characted held in this.Name, and return it't int value.
+        /// </summary>
+        /// <returns>Int value of the lenght of a Name</returns>
+        public int Size()
+        {
+            int lenght = this.Name.Length;
+            return lenght;
         }
 
         /// <summary>
